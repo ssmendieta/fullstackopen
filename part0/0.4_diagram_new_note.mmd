@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant B as Browser
+    participant S as Servidor
+
+
+    B->>S: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+    S->>S: Save new_note
+    S-->>B: 302 Redirect https://studies.cs.helsinki.fi/exampleapp/notes
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/notes
+    S-->>B: Archivo html(notes)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    S-->>B: Archivo css(main.css)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    S-->>B: Archivo js(main.js)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    S-->>B: Archivo json(data.json)

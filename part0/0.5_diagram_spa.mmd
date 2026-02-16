@@ -1,0 +1,13 @@
+sequenceDiagram
+    participant B as Browser
+    participant S as Servidor
+
+
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    S-->>B: Archivo html(spa)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    S-->>B: Archivo css(main.css)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/spa    .js
+    S-->>B: Archivo js(spa.js)
+    B->>S: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    S-->>B: Archivo json(data.json)
